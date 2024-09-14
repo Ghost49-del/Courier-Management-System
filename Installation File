@@ -1,0 +1,31 @@
+To use this script:
+
+Save it as a file, for example, cms_setup.sql.
+You can run this script in several ways:
+a. Using the MySQL command line client:
+Copymysql -u your_username -p < cms_setup.sql
+You'll be prompted to enter your MySQL password.
+b. Using phpMyAdmin:
+
+Log in to phpMyAdmin
+Select the "Import" tab
+Choose the cms_setup.sql file and click "Go"
+
+c. Using a MySQL GUI tool like MySQL Workbench:
+
+Open the tool and connect to your MySQL server
+Open the cms_setup.sql file
+Execute the script
+
+
+This script will:
+
+Create the cms database if it doesn't already exist
+Create all the tables you specified (users, place_courier, feedback, franchise, staff)
+Add the new columns we discussed earlier to the place_courier table
+
+
+
+Note that this script uses IF NOT EXISTS clauses, so it's safe to run multiple times without causing errors if the database or tables already exist.
+Remember to replace your_username with your actual MySQL username when running the script from the command line.
+Is there anything else you'd like to add or modify in this setup script?
