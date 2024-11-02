@@ -9,7 +9,7 @@ REM Path to your MySQL installation
 set MYSQL_PATH="C:\wamp64\bin\mysql\mysql8.3.0\bin\mysql"
 
 REM Run the SQL script
-%MYSQL_PATH% -u %MYSQL_USER% -p%MYSQL_PASSWORD% < setup_database.sql
+%MYSQL_PATH% -u %MYSQL_USER% -p%MYSQL_PASSWORD% < cms_setup.sql
 
 echo Database setup complete!
 pause
