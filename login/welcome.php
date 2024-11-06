@@ -11,7 +11,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CMS Dashboard</title>
+    <title>DMS Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -83,6 +83,13 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true) {
         .logout-link:hover {
             text-decoration: underline;
         }
+
+        .creator-text {
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body>
@@ -91,59 +98,45 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true) {
     <div class="dashboard-container">
         <div class="welcome-card">
             <h2>Welcome, <?php echo $_SESSION['mail']?></h2>
-            <p>You are logged into the Courier Management System</p>
+            <p>You are logged into the Dispatch Management System</p>
             <hr>
             <p>Need to leave? <a href="/login/logout.php" class="logout-link">Click here to logout</a></p>
         </div>
 
         <div class="grid-container">
             <div class="dashboard-card">
-                <i class="fas fa-box"></i>
-                <h4>Place Courier</h4>
-                <a href="/login/place_courier.php" class="btn btn-danger btn-dashboard">Start Shipping</a>
+                <i class="fas fa-clipboard-list"></i>
+                <h4>Orders</h4>
+                <a href="/login/place_courier.php" class="btn btn-primary btn-dashboard">Manage Orders</a>
             </div>
 
             <div class="dashboard-card">
-                <i class="fas fa-truck"></i>
+                <i class="fas fa-route"></i>
                 <h4>Track Delivery</h4>
-                <a href="/login/delivery_status.php" class="btn btn-success btn-dashboard">Check Status</a>
+                <a href="/login/delivery_status.php" class="btn btn-success btn-dashboard">Track Now</a>
             </div>
 
             <div class="dashboard-card">
-                <i class="fas fa-comments"></i>
-                <h4>Feedback</h4>
-                <a href="/login/feedback.php" class="btn btn-warning btn-dashboard">Give Feedback</a>
+                <i class="fas fa-gas-pump"></i>
+                <h4>Fuel Management</h4>
+                <a href="/login/fuel_management.php" class="btn btn-warning btn-dashboard">Manage Fuel</a>
             </div>
 
             <div class="dashboard-card">
-                <i class="fas fa-trash-alt"></i>
-                <h4>Remove Feedback</h4>
-                <a href="/login/del_feedback.php" class="btn btn-dark btn-dashboard">Delete</a>
+                <i class="fas fa-chart-bar"></i>
+                <h4>Reports</h4>
+                <a href="/login/reports.php" class="btn btn-info btn-dashboard">View Reports</a>
             </div>
 
             <div class="dashboard-card">
-                <i class="fas fa-user-plus"></i>
-                <h4>Staff Registration</h4>
-                <a href="/login/staff.php" class="btn btn-primary btn-dashboard">Register Staff</a>
+                <i class="fas fa-cog"></i>
+                <h4>Settings</h4>
+                <a href="/login/settings.php" class="btn btn-secondary btn-dashboard">System Settings</a>
             </div>
+        </div>
 
-            <div class="dashboard-card">
-                <i class="fas fa-user-edit"></i>
-                <h4>Update Staff</h4>
-                <a href="/login/staff_update.php" class="btn btn-secondary btn-dashboard">Update Details</a>
-            </div>
-
-            <div class="dashboard-card">
-                <i class="fas fa-store"></i>
-                <h4>Add Franchise</h4>
-                <a href="/login/franchise.php" class="btn btn-danger btn-dashboard">New Franchise</a>
-            </div>
-
-            <div class="dashboard-card">
-                <i class="fas fa-store-slash"></i>
-                <h4>Remove Franchise</h4>
-                <a href="/login/del_franchise.php" class="btn btn-dark btn-dashboard">Delete Franchise</a>
-            </div>
+        <div class="creator-text">
+            <p>Created by Emmanuel</p>
         </div>
     </div>
 
